@@ -1,3 +1,3 @@
 #!/bin/bash
 
-grep $read DB.txt
+grep $1 DB.txt

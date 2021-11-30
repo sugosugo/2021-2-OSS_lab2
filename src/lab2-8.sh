@@ -1,4 +1,6 @@
 #!/bin/bash
 
 eval "touch DB.txt"
-echo "$read $read2" >> DB.txt
+echo "$1 $2" >> DB.txt
+
+

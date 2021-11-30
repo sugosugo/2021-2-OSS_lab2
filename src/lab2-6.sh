@@ -1,19 +1,31 @@
 #!/bin/bash
 
-eval "mkdir -p $read"
-eval "cd $read"
-eval "touch files.tar"
+if [ ! -p file ]
+then
+        mk="mkdir files"
+        eval $mk
+
+fi
+
+str="cd files"
+eval $str
+
+i=0
 
 for i in 0 1 2 3 4
 do
-    eval "touch file$i.txt"
+	eval "touch file$i.txt"
 done
 
-eval ls
-eval "tar -cvf files.tar file0.txt file1.txt file2.txt file3.txt file4.txt"
-eval "mkdir files"
-eval "mv files.tar files"
-eval "cd files"
-eval "tar -xf files.tar"
-exit 0
+nd="mkdir files"
+eval $nd
 
+zip test.zip file0.txt file1.txt file2.txt file3.txt file4.txt
+
+dr="mv test.zip /home/kdh/2021-2-OSS_lab2/src/files/files/"
+eval $dr
+
+ncd="cd files"
+eval $ncd
+
+unzip test.zip

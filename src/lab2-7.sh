@@ -1,7 +1,7 @@
 #!/bin/bash
 
-eval "mkdir $read"
-eval "cd $read"
+eval "mkdir $1"
+eval "cd $1"
 
 i=0
 

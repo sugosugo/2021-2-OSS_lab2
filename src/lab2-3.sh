@@ -1,8 +1,9 @@
 #!/bin/bash
 
-val1='expr $1 $2'
+weight=$1
+height=$2
 
-bmi=`echo "$2 * $2 / $1"|bc`
+bmi=`echo "$weight / $height / $height"|bc`
 
 if [ $bmi -le 18 ]
 then
@@ -14,4 +15,3 @@ then
 else
         echo "정상체중입니다"
 fi
-
